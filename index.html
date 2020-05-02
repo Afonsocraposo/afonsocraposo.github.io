@@ -1,43 +1,114 @@
 <!DOCTYPE html>
-<title>Site Maintenance</title>
-<style>
-  body {
-    text-align: center;
-    padding: 150px;
-  }
-  h1 {
-    font-size: 50px;
-  }
-  body {
-    font: 20px Helvetica, sans-serif;
-    color: #333;
-  }
-  article {
-    display: block;
-    text-align: left;
-    width: 650px;
-    margin: 0 auto;
-  }
-  a {
-    color: #008bdc;
-    text-decoration: none;
-  }
-  a:hover {
-    color: #333;
-    text-decoration: none;
-  }
-</style>
 
-<article>
-  <h1>I&rsquo;ll be back soon!</h1>
-  <div>
-    <p>
-      Sorry for the inconvenience but I&rsquo;m performing some maintenance at
-      the moment. If you need to you can always
-      <a href="mailto:afonsocraposo@gmail.com?Subject=Github%20Website"
-        >contact me</a
-      >, otherwise I&rsquo;ll be back online shortly!
-    </p>
-    <p>&mdash; Afonso Raposo, 24/4/2020</p>
-  </div>
-</article>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Afonso Raposo</title>
+    <meta name="description" content="Personal website" />
+    <meta name="author" content="Afonso Raposo" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="github-widget/github-widget.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="container-sm" id="profile">
+      <img id="profile-image" src="images/avatar.jpg" alt="Profile image" />
+      <br /><br />
+      <div id="name">Afonso Raposo</div>
+      <br />
+      <h4>22 yo, Portugal</h4>
+      <p>
+        Currently finishing my Master's of Biomedical Engineering at Instituto
+        Superior Técnico
+      </p>
+    </div>
+
+    <!-- Tab links -->
+    <div class="tab">
+      <button class="tablinks active" onclick="setInfo(event, 'about')">
+        ABOUT
+      </button>
+      <button class="tablinks" onclick="setInfo(event, 'projects')">
+        PROJECTS
+      </button>
+    </div>
+
+    <div class="container-md" id="terminal-padded">
+      <div id="terminal">
+        <div id="app" class="container"></div>
+      </div>
+    </div>
+
+    <div class="container-md tabcontent" id="projects">
+      <div
+        class="github-widget"
+        data-user="afonsocraposo"
+        data-options='{"limit":6}'
+      ></div>
+    </div>
+
+    <div id="about" class="tabcontent">
+      <div id="links">
+        <div class="title">Find me at</div>
+        <div class="container-sd" id="icons">
+          <a href="#"
+            ><span><i class="icon-github icon-3x"></i></span
+          ></a>
+          <a href="#"> <i class="icon-linkedin-sign icon-3x"></i></a>
+          <a href="#"> <i class="icon-envelope icon-3x"></i></a>
+          <a href="#"> <i class="icon-twitter-sign icon-3x"></i></a>
+          <a href="#"> <i class="icon-instagram icon-3x"></i></a>
+        </div>
+      </div>
+
+      <div class="container-md" id="twitter-feed">
+        <div class="title">What I'm up to</div>
+        <div id="timeline">
+          <a
+            class="twitter-timeline"
+            data-theme="dark"
+            data-chrome="transparent"
+            href="https://twitter.com/afonso_raposo?ref_src=twsrc%5Etfw"
+            >Tweets by afonso_raposo</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script
+      async
+      src="https://platform.twitter.com/widgets.js"
+      charset="utf-8"
+    ></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="github-widget/github-widget.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
