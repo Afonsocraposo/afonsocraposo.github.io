@@ -1,3 +1,7 @@
+* {
+  color: #eee;
+}
+
 body {
   background-color: #181b1f;
   color: #eee;
@@ -56,6 +60,7 @@ body {
 
 #name {
   font-size: 4em;
+  line-height: 1em;
 }
 
 #desc {
