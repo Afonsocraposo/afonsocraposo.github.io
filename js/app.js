@@ -12,14 +12,14 @@ function setAbout() {
   typewriter.pauseFor(500);
 
   typewriter.typeString("Hello world!");
-  typewriter.pauseFor(1000);
+  typewriter.pauseFor(500);
   typewriter.pasteString(
     '<br><span style="color: greenyellow;">afonso@raposo</span>:<span style="color: lightblue;">~</span>$ '
   );
   typewriter.pauseFor(500);
 
   typewriter.typeString("My name is Afonso Raposo and welcome to my website");
-  typewriter.pauseFor(1000);
+  typewriter.pauseFor(500);
   typewriter.pasteString(
     '<br><span style="color: greenyellow;">afonso@raposo</span>:<span style="color: lightblue;">~</span>$ '
   );
@@ -42,14 +42,14 @@ function setProjects() {
   typewriter.pauseFor(500);
 
   typewriter.typeString("My projects!");
-  typewriter.pauseFor(1000);
+  typewriter.pauseFor(500);
   typewriter.pasteString(
     '<br><span style="color: greenyellow;">afonso@raposo</span>:<span style="color: lightblue;">~</span>$ '
   );
   typewriter.pauseFor(500);
 
   typewriter.typeString("These are the most popular ones");
-  typewriter.pauseFor(1000);
+  typewriter.pauseFor(500);
   typewriter.pasteString(
     '<br><span style="color: greenyellow;">afonso@raposo</span>:<span style="color: lightblue;">~</span>$ '
   );
@@ -59,6 +59,27 @@ function setProjects() {
     "You can find the rest on my <a href='https://github.com/Afonsocraposo'><u>GitHub</u></a>"
   );
 
+  typewriter.start();
+}
+
+function setSetup() {
+  var typewriter = new Typewriter(app, {
+    delay: 75,
+    cursor: "█",
+  });
+  typewriter.pasteString(
+    '<span style="color: greenyellow;">afonso@raposo</span>:<span style="color: lightblue;">~</span>$ '
+  );
+  typewriter.pauseFor(500);
+
+  typewriter.typeString("neofetch");
+  typewriter.pauseFor(500);
+  typewriter.pasteString(
+    '<img id="neofetch" src="images/neofetch.png" alt="Neofetch" /><div style="height'
+  );
+  typewriter.pasteString(
+    '<br><span style="color: greenyellow;">afonso@raposo</span>:<span style="color: lightblue;">~</span>$ '
+  );
   typewriter.start();
 }
 
@@ -80,6 +101,10 @@ function setInfo(evt, info) {
 
   evt.currentTarget.className += " active";
 
+  if (info != "setup") {
+    document.getElementById("terminal-padded").style.height = "120px";
+  }
+
   switch (info) {
     case "about":
       setAbout();
@@ -87,6 +112,11 @@ function setInfo(evt, info) {
       break;
     case "projects":
       setProjects();
+      document.getElementById(info).style.display = "block";
+      break;
+    case "setup":
+      setSetup();
+      document.getElementById("terminal-padded").style.height = "400px";
       document.getElementById(info).style.display = "block";
       break;
     default:

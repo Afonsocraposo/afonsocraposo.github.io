@@ -21,6 +21,7 @@ body {
   border-radius: 12px;
   border: 10px solid #30475e;
   height: 120px;
+  transition: 0.3s;
 }
 
 #terminal {
