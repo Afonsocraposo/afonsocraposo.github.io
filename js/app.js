@@ -75,7 +75,7 @@ function setSetup() {
   typewriter.typeString("neofetch");
   typewriter.pauseFor(500);
   typewriter.pasteString(
-    '<img id="neofetch" src="images/neofetch.png" alt="Neofetch" /><div style="height'
+    '<br><img id="neofetch" src="images/neofetch.png" alt="Neofetch" /><div style="height'
   );
   typewriter.pasteString(
     '<br><span style="color: greenyellow;">afonso@raposo</span>:<span style="color: lightblue;">~</span>$ '
