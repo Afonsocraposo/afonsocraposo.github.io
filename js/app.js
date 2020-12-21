@@ -116,7 +116,7 @@ function setInfo(evt, info) {
       break;
     case "setup":
       setSetup();
-      document.getElementById("terminal-padded").style.height = "390px";
+      document.getElementById("terminal-padded").style.height = "420px";
       document.getElementById(info).style.display = "block";
       break;
     default:
