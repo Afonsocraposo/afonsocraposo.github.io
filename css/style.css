@@ -48,6 +48,8 @@ body {
   border-radius: 12px;
   border: 10px solid #30475e;
   background-color: #1e2225;
+  width: 50vw;
+  margin: auto;
 }
 
 #timeline iframe {
@@ -169,6 +171,9 @@ No media query for `xs` since this is the default in Bootstrap
   .container-sd {
     max-width: 40%;
   }
+  #timeline {
+      width: 70vw;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -179,6 +184,14 @@ No media query for `xs` since this is the default in Bootstrap
   #profile-image {
     width: 30%;
   }
+    #timeline {
+      width: 30vw;
+  }
+  #timeline {
+      width: 50vw;
+  }
+
+
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -194,6 +207,10 @@ No media query for `xs` since this is the default in Bootstrap
   #profile-image {
     width: 20%;
   }
+  
+  #timeline {
+      width: 40vw;
+  }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -206,5 +223,8 @@ No media query for `xs` since this is the default in Bootstrap
   }
   #profile-image {
     width: 20%;
+  }
+  #timeline {
+      width: 30vw;
   }
 }
